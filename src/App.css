@@ -1,38 +1,73 @@
 .App {
+  min-width: 100vw;
   text-align: center;
+  border: 1pxx solid black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sheet-header{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 11vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: left;
+  gap: 0 10px;
+  margin: 0 0 0;
+  z-index: 99;
+  display: flex;
+  background-color: gray;
+  /* border: 1px solid black; */
+}
+
+.sheet-body{
+  position: absolute; /* to have scrolling for the grid container*/
+  top: 12vh;
+  left: 5px;
+  min-height: 80vh; 
+  width: 100vw;
+  overflow: auto;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.toolbar-section{
+    /* width: 12vw; */
+    height: 9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+    padding: 0 10px 0 0;
+
+}
+
+.btn{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(5, 5, 5);
+    height: 80%;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    width:40%;
+    cursor: pointer;
+}
+
+.btn:hover{
+  transform: scale(1.1);
+  background-color: burlywood;
+}
+
+.toolbar-label{
+  font-size: 0.9rem;
+  height: 10%;
   color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -1,0 +1,14 @@
+.table {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: repeat(var(--col),  min(150px,10vw));
+  grid-template-rows: repeat(var(--rows), 50px);
+  gap: 5px 5px;
+ 
+}
